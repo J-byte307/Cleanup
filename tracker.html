@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker - Earth Cleaning Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <header>
+        <div class="site-brand">
+            <img class="site-logo" src="logo.png" alt="Earth Cleaning Project logo">
+            <div>
+                <h1>Cleaning Events Tracker</h1>
+                <p>Track our cleaning efforts and progress across the globe</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="tracker">
+            <h2>Our Cleaning Events</h2>
+            <p><em>Track all the amazing cleanup initiatives we've organized and the impact we're making!</em></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Objective</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>May 14, 2026</td>
+                        <td>9:00 AM - 12:00 PM</td>
+                        <td>Beach cleanup - collect plastic waste</td>
+                    </tr>
+                    <tr>
+                        <td>May 21, 2026</td>
+                        <td>10:00 AM - 2:00 PM</td>
+                        <td>Park cleaning - remove litter and plant trees</td>
+                    </tr>
+                    <tr>
+                        <td>May 28, 2026</td>
+                        <td>8:00 AM - 11:00 AM</td>
+                        <td>Street cleanup - focus on recycling bins</td>
+                    </tr>
+                    <tr>
+                        <td>June 4, 2026</td>
+                        <td>3:00 PM - 5:00 PM</td>
+                        <td>Riverside cleanup - remove debris</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <a href="main.html">
+                <button class="button1">👈 Back to Home</button>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Earth Cleaning Project. All rights reserved.</p>
+        <p>Find us on social media: 📝 <strong>Instagram</strong> or <strong>Facebook</strong></p>
+    </footer>
+    <script>
+        const circle = document.getElementById('cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            circle.style.left = (e.clientX - 10) + 'px';
+            circle.style.top = (e.clientY - 10) + 'px';
+        });
+    </script>
+</body>
+</html>

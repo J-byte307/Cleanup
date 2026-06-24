@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Cleaning Project - Merchandise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <header>
+        <div class="site-brand">
+            <img class="site-logo" src="logo.png" alt="Earth Cleaning Project logo">
+            <div>
+                <h1>Earth Cleaning Project - Merchandise</h1>
+                <p>Wear your commitment to a cleaner planet!</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="back-btn">
+            <a href="main.html">
+                <button class="button1"> 👈 Back to Home</button>
+            </a>
+        </div>
+
+        <section>
+            <h2>Our T-Shirt Collection</h2>
+            <p>Show your support for environmental conservation with our eco-friendly merchandise. All proceeds go towards our clean-up initiatives! We use FormSubmit to process orders, so your information is safe and secure. Place your order today and help us make a difference!</p>
+            <p><strong>All prices are listed in GBP.</strong></p>
+            <div class="tshirt-container">
+                <div class="tshirt-card" role="button" tabindex="0" data-shirt="Classic Green Tee">
+                    <div class="tshirt-image">🌿</div>
+                    <h3>Classic Green Tee</h3>
+                    <p>Soft, durable, and designed for everyday wear.</p>
+                    <p class="price">💷20</p>
+                </div>
+                <div class="tshirt-card" role="button" tabindex="0" data-shirt="Planet Pride Tee">
+                    <div class="tshirt-image">🌎</div>
+                    <h3>Planet Pride Tee</h3>
+                    <p>A bold design that shows your commitment to the environment.</p>
+                    <p class="price">💷22</p>
+                </div>
+                <div class="tshirt-card" role="button" tabindex="0" data-shirt="Recycled Material Tee">
+                    <div class="tshirt-image">♻️</div>
+                    <h3>Recycled Material Tee</h3>
+                    <p>Made from sustainable fabrics for a lower footprint.</p>
+                    <p class="price">💷25</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="order-form">
+            <h2>Place Your Order</h2>
+            <form action="https://formsubmit.co/tanibhan@tasisengland.org" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size" required>
+                        <option value="">-- Choose Size --</option>
+       
+                        <option value="S">Small (S)</option>
+                        <option value="M">Medium (M)</option>
+                        <option value="L">Large (L)</option>
+                        <option value="XL">Extra Large (XL)</option>
+ 
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="shirt">Selected Shirt:</label>
+                    <select id="shirt" name="shirt" required>
+                        <option value="">-- Choose a Shirt --</option>
+                        <option value="Classic Green Tee">Classic Green Tee</option>
+                        <option value="Planet Pride Tee">Planet Pride Tee</option>
+                        <option value="Recycled Material Tee">Recycled Material Tee</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any special instructions..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Complete Order</button>
+            </form>
+        </div>
+
+
+
+
+    </main>
+    <footer>
+        <p>&copy; 2026 Earth Cleaning Project. All rights reserved.</p>
+        <p>Find us on social media: 📝 <strong>Instagram</strong> or <strong>Facebook</strong></p>
+    </footer>
+    <script>
+        const circle = document.getElementById('cursor-circle');
+        const shirtField = document.getElementById('shirt');
+        const shirtCards = document.querySelectorAll('.tshirt-card[data-shirt]');
+
+        function selectShirt(card) {
+            const shirtName = card.getAttribute('data-shirt');
+            if (shirtField) {
+                shirtField.value = shirtName;
+            }
+
+            shirtCards.forEach((shirtCard) => {
+                shirtCard.classList.toggle('selected', shirtCard === card);
+            });
+        }
+
+        shirtCards.forEach((card) => {
+            card.addEventListener('click', () => selectShirt(card));
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    selectShirt(card);
+                }
+            });
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            circle.style.left = (e.clientX - 5) + 'px';
+            circle.style.top = (e.clientY - 5) + 'px';
+        });
+    </script>
+</body>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earth Cleaning Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="cursor-circle" id="cursor-circle"></div>
+
+  <header>
+    <div class="site-brand">
+      <div>
+        <h1>Earth Cleaning Project</h1>
+        <p>Building cleaner communities through action, awareness, and care.</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <a href="main.html">Home</a>
+    <a href="tshirt.html">Shop</a>
+    <a href="tracker.html">Tracker</a>
+    <a href="funds.html">Funds</a>
+  </nav>
+
+  <main id="main">
+    <section>
+      <h2>Welcome</h2>
+      <p>This landing page opens the project safely and gives you quick access to the main sections of the website.</p>
+    </section>
+
+    <section>
+      <h2>Explore</h2>
+      <p>
+        <a class="button1" href="main.html">Open the main page</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Earth Cleaning Project. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const circle = document.getElementById('cursor-circle');
+    if (circle) {
+      document.addEventListener('mousemove', (event) => {
+        circle.style.left = `${event.clientX - 8}px`;
+        circle.style.top = `${event.clientY - 8}px`;
+      });
+    }
+  </script>
+</body>
+</html>

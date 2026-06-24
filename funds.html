@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funds - Earth Cleaning Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./Clean.png" type="image/x-icon">
+  </head>
+  <body>
+    <div class="cursor-circle" id="cursor-circle"></div>
+    <header>
+        <div class="site-brand">
+            <img class="site-logo" src="logo.png" alt="Earth Cleaning Project logo">
+            <div>
+                <h1>Earth Cleaning Project - Funds</h1>  
+                <p>Support our mission to clean up the planet</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>How We Use Funds</h2>
+            <p>We are a non-profit organization dedicated to cleaning up our planet and promoting sustainable living. We rely on the generosity of donors and supporters to fund our initiatives and make a positive impact on the environment.</p>
+            
+            <ul>
+                <li><strong>Clean-up Events:</strong> Funds are used to organize and execute clean-up events in local communities, parks, beaches, and other public spaces. This includes purchasing supplies such as trash bags, gloves, and tools.</li>
+                <li><strong>Educational Programs:</strong> We develop educational materials and programs to raise awareness about environmental issues and promote sustainable practices. Funds help us create and distribute these resources.</li>
+                <li><strong>Community Outreach:</strong> We engage with local communities to encourage participation in our initiatives. Funds are used for outreach efforts, including marketing materials and community events.</li>
+                <li><strong>Operational Costs:</strong> As a non-profit organization, we have operational costs such as website maintenance, administrative expenses, and printing materials. Funds help us cover these essential costs.</li>
+            </ul>
+
+            <p><em>We use secure payment processing to manage our funds safely. Our payment partner is Collectiv. They accept various payment methods and ensure all transactions are processed securely.</em></p>
+        </section>
+
+        <section>
+            <h2>Live Fund Counter</h2>
+            <div class="fund-display">
+                <p>Current Total Raised:</p>
+                <h3 class="fund-amount" id="fundAmount">$0.00</h3>
+                <p class="fund-goal">Goal: <span id="fundGoal">$5000</span></p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <a href="https://pay.collctiv.com/clean-up-crew-48375" target="_blank" rel="noopener noreferrer">
+                    <button class="button1">💚 Donate Now</button>
+                </a>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #555;">Tracker updates manually every da
+                     to reflect new donations. Thank you for your support!</p>
+                </p>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <a href="main.html">
+                <button class="button1">👈 Back to Home</button>
+            </a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Earth Cleaning Project. All rights reserved.</p>
+        <p>Find us on social media: 📝 <strong>Instagram</strong> or <strong>Facebook</strong></p>
+    </footer>
+    <script>
+        const circle = document.getElementById('cursor-circle');
+        document.addEventListener('mousemove', (e) => {
+            circle.style.left = (e.clientX - 10) + 'px';
+            circle.style.top = (e.clientY - 10) + 'px';
+        });
+    </script>
+    <script src="funds.js"></script>
+  </body>
+</html>
